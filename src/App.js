@@ -17,29 +17,29 @@ function GlobalStyles({ dark }) {
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg:         ${dark ? "#060810"  : "#f0f4ff"};
-      --bg-2:       ${dark ? "#0d1117"  : "#ffffff"};
-      --bg-3:       ${dark ? "#161b27"  : "#f4f6fc"};
-      --bg-4:       ${dark ? "#1e2535"  : "#e8ecf7"};
-      --border:     ${dark ? "rgba(255,255,255,0.06)" : "rgba(99,120,220,0.12)"};
-      --border-hover:${dark ? "rgba(255,255,255,0.12)" : "rgba(99,120,220,0.25)"};
-      --text-1:     ${dark ? "#f0f4ff"  : "#0f1623"};
-      --text-2:     ${dark ? "#8892aa"  : "#4a5578"};
-      --text-3:     ${dark ? "#3d4a63"  : "#9aa3bb"};
-      --accent:     ${dark ? "#4f8ef7"  : "#2563eb"};
-      --accent-dim: ${dark ? "rgba(79,142,247,0.12)"  : "rgba(37,99,235,0.08)"};
-      --accent-glow:${dark ? "rgba(79,142,247,0.25)"  : "rgba(37,99,235,0.2)"};
-      --green:      ${dark ? "#34d399"  : "#059669"};
-      --green-dim:  ${dark ? "rgba(52,211,153,0.12)"  : "rgba(5,150,105,0.08)"};
-      --red:        ${dark ? "#f87171"  : "#dc2626"};
-      --red-dim:    ${dark ? "rgba(248,113,113,0.12)" : "rgba(220,38,38,0.08)"};
-      --amber:      ${dark ? "#fbbf24"  : "#d97706"};
-      --amber-dim:  ${dark ? "rgba(251,191,36,0.12)"  : "rgba(217,119,6,0.08)"};
-      --purple:     ${dark ? "#a78bfa"  : "#7c3aed"};
-      --purple-dim: ${dark ? "rgba(167,139,250,0.12)" : "rgba(124,58,237,0.08)"};
-      --shadow-sm:  ${dark ? "0 1px 3px rgba(0,0,0,0.4)"  : "0 1px 4px rgba(37,99,235,0.08)"};
-      --shadow-md:  ${dark ? "0 4px 20px rgba(0,0,0,0.5)" : "0 4px 24px rgba(37,99,235,0.1)"};
-      --shadow-lg:  ${dark ? "0 8px 40px rgba(0,0,0,0.6)" : "0 8px 48px rgba(37,99,235,0.14)"};
+      --bg:         ${dark ? "#13161e"  : "#f8f9fc"};
+      --bg-2:       ${dark ? "#1c2030"  : "#ffffff"};
+      --bg-3:       ${dark ? "#242840"  : "#f1f3f9"};
+      --bg-4:       ${dark ? "#2d3250"  : "#e4e8f2"};
+      --border:     ${dark ? "rgba(255,255,255,0.09)" : "rgba(0,0,0,0.08)"};
+      --border-hover:${dark ? "rgba(255,255,255,0.18)" : "rgba(0,0,0,0.16)"};
+      --text-1:     ${dark ? "#e8ecf8"  : "#0d1117"};
+      --text-2:     ${dark ? "#8f97b8"  : "#505878"};
+      --text-3:     ${dark ? "#555e7e"  : "#a0a8c0"};
+      --accent:     ${dark ? "#6b9fff"  : "#2563eb"};
+      --accent-dim: ${dark ? "rgba(107,159,255,0.15)" : "rgba(37,99,235,0.08)"};
+      --accent-glow:${dark ? "rgba(107,159,255,0.25)" : "rgba(37,99,235,0.2)"};
+      --green:      ${dark ? "#4ade80"  : "#059669"};
+      --green-dim:  ${dark ? "rgba(74,222,128,0.15)"  : "rgba(5,150,105,0.08)"};
+      --red:        ${dark ? "#fb7185"  : "#dc2626"};
+      --red-dim:    ${dark ? "rgba(251,113,133,0.15)" : "rgba(220,38,38,0.08)"};
+      --amber:      ${dark ? "#fcd34d"  : "#d97706"};
+      --amber-dim:  ${dark ? "rgba(252,211,77,0.15)"  : "rgba(217,119,6,0.08)"};
+      --purple:     ${dark ? "#c084fc"  : "#7c3aed"};
+      --purple-dim: ${dark ? "rgba(192,132,252,0.15)" : "rgba(124,58,237,0.08)"};
+      --shadow-sm:  ${dark ? "0 1px 4px rgba(0,0,0,0.4)"  : "0 1px 4px rgba(37,99,235,0.08)"};
+      --shadow-md:  ${dark ? "0 4px 20px rgba(0,0,0,0.4)" : "0 4px 24px rgba(37,99,235,0.1)"};
+      --shadow-lg:  ${dark ? "0 8px 36px rgba(0,0,0,0.5)" : "0 8px 48px rgba(37,99,235,0.14)"};
       --radius-sm:6px; --radius-md:10px; --radius-lg:16px; --radius-xl:20px;
       --font:'DM Sans',sans-serif; --font-mono:'DM Mono',monospace;
     }
@@ -50,9 +50,6 @@ function GlobalStyles({ dark }) {
     @keyframes slideRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
     @keyframes pulse     {0%,100%{opacity:1}50%{opacity:0.4}}
     @keyframes spin      {to{transform:rotate(360deg)}}
-    @keyframes float     {0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-    @keyframes floatSlow {0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(3deg)}}
-    @keyframes drift     {0%,100%{transform:translate(0,0)}33%{transform:translate(12px,-8px)}66%{transform:translate(-8px,10px)}}
     .fade-up  {animation:fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) both}
     .fade-up-1{animation:fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) 0.05s both}
     .fade-up-2{animation:fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) 0.10s both}
@@ -79,26 +76,32 @@ function GlobalStyles({ dark }) {
     .modal{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;width:100%;max-width:480px;box-shadow:var(--shadow-lg);animation:fadeUp 0.3s cubic-bezier(0.16,1,0.3,1);}
     .label{display:block;font-size:12px;font-weight:500;color:var(--text-2);margin-bottom:6px;letter-spacing:0.04em;text-transform:uppercase;}
     .field-error{color:var(--red);font-size:12px;margin-top:5px;display:flex;align-items:center;gap:4px;}
-    .theme-toggle{position:relative;width:48px;height:26px;background:var(--bg-4);border:1px solid var(--border);border-radius:99px;cursor:pointer;transition:background 0.3s;}
-    .theme-toggle-thumb{position:absolute;top:3px;width:18px;height:18px;background:var(--accent);border-radius:50%;transition:left 0.3s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:center;justify-content:center;font-size:10px;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
+
   `;
   return <style>{css}</style>;
 }
 
 const DEPT = {
-  Engineering:{color:"#4f8ef7",icon:"⚙️"}, HR:{color:"#a78bfa",icon:"🤝"},
-  Sales:{color:"#fbbf24",icon:"📈"},       QA:{color:"#34d399",icon:"🔍"},
-  IT:{color:"#f472b6",icon:"💻"},          Finance:{color:"#fb923c",icon:"💰"},
+  Engineering:{color:"#3b82f6"}, HR:{color:"#8b5cf6"},
+  Sales:{color:"#f59e0b"},       QA:{color:"#10b981"},
+  IT:{color:"#ec4899"},          Finance:{color:"#f97316"},
 };
-const getDept = (d) => DEPT[d] || { color:"#4f8ef7", icon:"🏢" };
+const getDept = (d) => DEPT[d] || { color:"#3b82f6" };
 
 function ThemeToggle() {
   const { dark, toggle } = useTheme();
   return (
-    <button onClick={toggle} className="theme-toggle" title={dark?"Switch to Light":"Switch to Dark"}>
-      <div className="theme-toggle-thumb" style={{ left: dark ? "26px" : "3px" }}>
-        {dark ? "🌙" : "☀️"}
-      </div>
+    <button onClick={toggle} className="theme-toggle" title={dark?"Switch to Light":"Switch to Dark"} style={{ display:"flex", alignItems:"center", gap:6, padding:"6px 12px", background:"var(--bg-3)", border:"1px solid var(--border)", borderRadius:"var(--radius-md)", cursor:"pointer", transition:"all 0.2s" }}
+      onMouseEnter={e=>e.currentTarget.style.borderColor="var(--border-hover)"}
+      onMouseLeave={e=>e.currentTarget.style.borderColor="var(--border)"}
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" strokeWidth="2" strokeLinecap="round">
+        {dark
+          ? <><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></>
+          : <><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></>
+        }
+      </svg>
+      <span style={{ fontSize:12, color:"var(--text-2)", fontWeight:500 }}>{dark ? "Dark" : "Light"}</span>
     </button>
   );
 }
@@ -152,9 +155,14 @@ function AuthPage({ onLogin, showToast }) {
 
   const validate = () => {
     const newErrors = {};
-    if (!form.username.trim()) newErrors.username = "Username is required";
-    else if (form.username.trim().length < 3) newErrors.username = "At least 3 characters required";
-    else if (/\s/.test(form.username)) newErrors.username = "No spaces allowed";
+    if (!form.username.trim()) {
+      newErrors.username = "Username is required";
+    } else if (tab === "register") {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.username.trim()))
+        newErrors.username = "Please enter a valid email address (e.g. user@mail.com)";
+    } else {
+      if (form.username.trim().length < 3) newErrors.username = "At least 3 characters required";
+    }
 
     const pwdError = validatePassword(form.password);
     if (pwdError) newErrors.password = pwdError;
@@ -197,45 +205,37 @@ function AuthPage({ onLogin, showToast }) {
   return (
     <div style={{ minHeight:"100vh", display:"flex", position:"relative", overflow:"hidden" }}>
 
-      {/* LEFT PANEL */}
-      <div style={{ flex:"0 0 55%", position:"relative", overflow:"hidden",
-        background: dark ? "linear-gradient(135deg, #0a0f2e 0%, #0d1a4a 40%, #0a1628 100%)" : "linear-gradient(135deg, #1e3a8a 0%, #2563eb 45%, #1d4ed8 100%)",
-        display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", padding:"60px 64px" }}>
+      {/* LEFT PANEL — clean, no bubbles, no grids */}
+      <div style={{
+        flex:"0 0 52%", display:"flex", flexDirection:"column",
+        justifyContent:"center", alignItems:"center",
+        background: dark ? "#1c2236" : "#1e3a8a",
+        padding:"60px 48px", position:"relative", overflow:"hidden",
+      }}>
+        {/* Solid diagonal accent strip only */}
+        <div style={{ position:"absolute", bottom:0, right:0, width:0, height:0, borderStyle:"solid", borderWidth:"0 0 180px 180px", borderColor:`transparent transparent ${dark?"rgba(255,255,255,0.02)":"rgba(255,255,255,0.04)"} transparent`, pointerEvents:"none" }} />
+        <div style={{ position:"absolute", top:0, left:0, width:0, height:0, borderStyle:"solid", borderWidth:"120px 120px 0 0", borderColor:`${dark?"rgba(255,255,255,0.02)":"rgba(255,255,255,0.04)"} transparent transparent transparent`, pointerEvents:"none" }} />
 
-        <div style={{ position:"absolute", inset:0, zIndex:0, backgroundImage: dark
-          ? "radial-gradient(ellipse at 20% 50%, rgba(79,142,247,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(167,139,250,0.12) 0%, transparent 50%)"
-          : "radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(167,139,250,0.2) 0%, transparent 50%)",
-          pointerEvents:"none" }} />
-        <div style={{ position:"absolute", inset:0, zIndex:0, backgroundImage:"linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)", backgroundSize:"48px 48px", pointerEvents:"none" }} />
-        <div style={{ position:"absolute", top:"8%", right:"12%", width:280, height:280, borderRadius:"50%", background:dark?"rgba(79,142,247,0.08)":"rgba(255,255,255,0.07)", animation:"float 7s ease-in-out infinite", zIndex:0, pointerEvents:"none" }} />
-        <div style={{ position:"absolute", bottom:"15%", left:"5%", width:200, height:200, borderRadius:"50%", background:dark?"rgba(167,139,250,0.07)":"rgba(255,255,255,0.06)", animation:"floatSlow 9s ease-in-out infinite", zIndex:0, pointerEvents:"none" }} />
-        <div style={{ position:"absolute", top:"-60px", right:"-60px", width:320, height:320, borderRadius:"50%", border:"1px solid rgba(255,255,255,0.06)", zIndex:0, pointerEvents:"none" }} />
-        <div style={{ position:"absolute", bottom:"-80px", left:"-80px", width:360, height:360, borderRadius:"50%", border:"1px solid rgba(255,255,255,0.04)", zIndex:0, pointerEvents:"none" }} />
+        {/* Logo + Name centered */}
+        <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:24, zIndex:1 }}>
 
-        <div style={{ position:"relative", zIndex:1 }}>
-          <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:52 }}>
-            <div style={{ width:40, height:40, background:"rgba(255,255,255,0.15)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,0.2)", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20 }}>👥</div>
-            <span style={{ color:"rgba(255,255,255,0.9)", fontWeight:600, fontSize:16 }}>EMS Portal</span>
+          {/* Professional SVG Logo */}
+          <div style={{ width:80, height:80, borderRadius:22, background:"rgba(255,255,255,0.1)", border:"1px solid rgba(255,255,255,0.15)", display:"flex", alignItems:"center", justifyContent:"center" }}>
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <circle cx="16" cy="16" r="7" fill="rgba(255,255,255,0.95)"/>
+              <circle cx="32" cy="16" r="5" fill="rgba(255,255,255,0.5)"/>
+              <path d="M2 40c0-7.7 6.3-13 14-13s14 5.3 14 13" stroke="rgba(255,255,255,0.95)" strokeWidth="3" strokeLinecap="round" fill="none"/>
+              <path d="M32 27c4.5 0 10 2.8 10 9" stroke="rgba(255,255,255,0.5)" strokeWidth="3" strokeLinecap="round" fill="none"/>
+            </svg>
           </div>
-          <h1 style={{ fontSize:42, fontWeight:700, color:"#ffffff", lineHeight:1.15, letterSpacing:"-1px", marginBottom:20, maxWidth:420 }}>
-            Manage your<br />
-            <span style={{ background:"linear-gradient(90deg, #93c5fd, #c4b5fd)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>workforce</span>{" "}smarter.
-          </h1>
-          <p style={{ fontSize:15, color:"rgba(255,255,255,0.55)", lineHeight:1.7, maxWidth:380, marginBottom:48, fontWeight:300 }}>
-            A centralized platform to track, manage, and grow your team — built for modern organizations.
-          </p>
-          <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
-            {[{icon:"⚡",text:"Real-time employee tracking"},{icon:"🔒",text:"JWT-secured access control"},{icon:"📊",text:"Department analytics at a glance"}].map(({icon,text})=>(
-              <div key={text} style={{ display:"flex", alignItems:"center", gap:12 }}>
-                <div style={{ width:32, height:32, background:"rgba(255,255,255,0.1)", borderRadius:8, display:"flex", alignItems:"center", justifyContent:"center", fontSize:15, flexShrink:0 }}>{icon}</div>
-                <span style={{ color:"rgba(255,255,255,0.7)", fontSize:14 }}>{text}</span>
-              </div>
-            ))}
+
+          {/* Company name */}
+          <div style={{ textAlign:"center" }}>
+            <p style={{ color:"#ffffff", fontSize:26, fontWeight:700, letterSpacing:"-0.5px", marginBottom:8 }}>EMS Portal</p>
+            <div style={{ width:32, height:2, background:"rgba(255,255,255,0.25)", borderRadius:99, margin:"0 auto 12px" }} />
+            <p style={{ color:"rgba(255,255,255,0.45)", fontSize:12, letterSpacing:"0.12em", textTransform:"uppercase", fontWeight:400 }}>Employee Management System</p>
           </div>
-          <div style={{ marginTop:52, display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.12)", borderRadius:99, padding:"8px 16px" }}>
-            <div style={{ width:8, height:8, borderRadius:"50%", background:"#34d399", animation:"pulse 2s infinite" }} />
-            <span style={{ color:"rgba(255,255,255,0.6)", fontSize:12, fontFamily:"var(--font-mono)" }}>System Online — v1.0</span>
-          </div>
+
         </div>
       </div>
 
@@ -266,8 +266,9 @@ function AuthPage({ onLogin, showToast }) {
 
             {/* Username */}
             <div>
-              <label className="label">Username</label>
-              <input name="username" value={form.username} onChange={handle} placeholder="Enter your username"
+              <label className="label">{tab === "register" ? "Email Address" : "Username"}</label>
+              <input name="username" value={form.username} onChange={handle}
+                placeholder={tab === "register" ? "e.g. user@company.com" : "Enter your username"}
                 className={errors.username ? "error" : ""} />
               <FieldError msg={errors.username} />
             </div>
@@ -328,7 +329,7 @@ function AuthPage({ onLogin, showToast }) {
           </div>
 
           <p style={{ textAlign:"center", marginTop:24, fontSize:12, color:"var(--text-3)" }}>
-            Employee Management System · v1.0
+            Employee Management System
           </p>
         </div>
       </div>
@@ -414,7 +415,11 @@ function DeleteModal({ employee, onClose, onConfirm }) {
   return (
     <div className="overlay" onClick={e=>e.target===e.currentTarget&&onClose()}>
       <div className="modal" style={{ maxWidth:400, textAlign:"center" }}>
-        <div style={{ width:56, height:56, margin:"0 auto 20px", background:"var(--red-dim)", border:"1px solid rgba(220,38,38,0.2)", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", fontSize:22 }}>🗑️</div>
+        <div style={{ width:52, height:52, margin:"0 auto 18px", background:"var(--red-dim)", border:"1px solid rgba(220,38,38,0.2)", borderRadius:12, display:"flex", alignItems:"center", justifyContent:"center" }}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+          </svg>
+        </div>
         <h2 style={{ fontSize:20, fontWeight:600, marginBottom:8 }}>Delete Employee?</h2>
         <p style={{ fontSize:14, color:"var(--text-2)", marginBottom:4, lineHeight:1.6 }}>You're about to permanently delete</p>
         <p style={{ fontSize:16, fontWeight:600, marginBottom:6 }}>{employee.name}</p>
@@ -428,17 +433,17 @@ function DeleteModal({ employee, onClose, onConfirm }) {
   );
 }
 
-function StatCard({ label, value, color, icon, delay }) {
+function StatCard({ label, value, color, delay }) {
   return (
-    <div className={`card fade-up-${delay}`} style={{ padding:"20px 22px", display:"flex", alignItems:"center", gap:16, transition:"border-color 0.2s,transform 0.2s,box-shadow 0.2s", cursor:"default" }}
-      onMouseEnter={e=>{ e.currentTarget.style.borderColor="var(--border-hover)"; e.currentTarget.style.transform="translateY(-2px)"; e.currentTarget.style.boxShadow="var(--shadow-md)"; }}
+    <div className={`card fade-up-${delay}`} style={{
+      padding:"24px 26px", cursor:"default",
+      transition:"border-color 0.2s, transform 0.2s, box-shadow 0.2s",
+    }}
+      onMouseEnter={e=>{ e.currentTarget.style.borderColor="var(--border-hover)"; e.currentTarget.style.transform="translateY(-1px)"; e.currentTarget.style.boxShadow="var(--shadow-md)"; }}
       onMouseLeave={e=>{ e.currentTarget.style.borderColor="var(--border)"; e.currentTarget.style.transform="translateY(0)"; e.currentTarget.style.boxShadow="none"; }}
     >
-      <div style={{ width:46, height:46, borderRadius:"var(--radius-md)", background:`${color}18`, border:`1px solid ${color}30`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>{icon}</div>
-      <div>
-        <p style={{ fontSize:11, color:"var(--text-3)", fontWeight:500, marginBottom:4, textTransform:"uppercase", letterSpacing:"0.06em" }}>{label}</p>
-        <p style={{ fontSize:24, fontWeight:600, color, fontFamily:"var(--font-mono)", lineHeight:1 }}>{value}</p>
-      </div>
+      <p style={{ fontSize:11, color:"var(--text-3)", fontWeight:600, marginBottom:12, textTransform:"uppercase", letterSpacing:"0.08em" }}>{label}</p>
+      <p style={{ fontSize:32, fontWeight:700, color:"var(--text-1)", lineHeight:1 }}>{value}</p>
     </div>
   );
 }
@@ -480,9 +485,8 @@ function Dashboard({ username, onLogout, showToast }) {
     <div style={{ minHeight:"100vh", background:"var(--bg)" }}>
       <nav style={{ background:"var(--bg-2)", borderBottom:"1px solid var(--border)", padding:"0 28px", height:58, display:"flex", alignItems:"center", justifyContent:"space-between", position:"sticky", top:0, zIndex:100 }}>
         <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-          <div style={{ width:32, height:32, background:"var(--accent-dim)", border:"1px solid var(--border)", borderRadius:8, display:"flex", alignItems:"center", justifyContent:"center", fontSize:16 }}>👥</div>
-          <span style={{ fontWeight:600, fontSize:15, letterSpacing:"-0.2px" }}>EMS</span>
-          <span style={{ marginLeft:4, fontSize:11, background:"var(--accent-dim)", color:"var(--accent)", border:"1px solid var(--border)", borderRadius:4, padding:"2px 6px", fontFamily:"var(--font-mono)" }}>v1.0</span>
+          <span style={{ fontWeight:700, fontSize:15, letterSpacing:"-0.3px" }}>EMS Portal</span>
+
         </div>
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
           <ThemeToggle />
@@ -498,14 +502,14 @@ function Dashboard({ username, onLogout, showToast }) {
       </nav>
       <div style={{ padding:"32px 28px", maxWidth:1200, margin:"0 auto" }}>
         <div className="fade-up" style={{ marginBottom:28 }}>
-          <h1 style={{ fontSize:26, fontWeight:600, letterSpacing:"-0.5px", marginBottom:4 }}>Workforce Overview</h1>
-          <p style={{ fontSize:14, color:"var(--text-3)" }}>Manage and track your organization's employees</p>
+          <h1 style={{ fontSize:26, fontWeight:600, letterSpacing:"-0.5px", marginBottom:4 }}>Employee Dashboard</h1>
+          <p style={{ fontSize:14, color:"var(--text-3)" }}></p>
         </div>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(210px,1fr))", gap:14, marginBottom:28 }}>
-          <StatCard label="Total Employees" value={employees.length}                                 color="var(--accent)" icon="👤" delay="1" />
-          <StatCard label="Active"           value={employees.filter(e=>e.status==="ACTIVE").length} color="var(--green)"  icon="✓"  delay="2" />
-          <StatCard label="Departments"      value={Object.keys(deptCounts).length}                  color="var(--purple)" icon="🏢" delay="3" />
-          <StatCard label="Top Dept"         value={topDept}                                          color="var(--amber)"  icon="⭐" delay="4" />
+          <StatCard label="Total Employees" value={employees.length}                                 color="var(--accent)" delay="1" />
+          <StatCard label="Active"           value={employees.filter(e=>e.status==="ACTIVE").length} color="var(--green)" delay="2" />
+          <StatCard label="Departments"      value={Object.keys(deptCounts).length}                  color="var(--purple)" delay="3" />
+          <StatCard label="Top Dept"         value={topDept}                                          color="var(--amber)" delay="4" />
         </div>
         <div className="card fade-up-2" style={{ overflow:"hidden" }}>
           <div style={{ padding:"18px 22px", borderBottom:"1px solid var(--border)", display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
@@ -514,7 +518,7 @@ function Dashboard({ username, onLogout, showToast }) {
               <p style={{ fontSize:12, color:"var(--text-3)" }}>{filtered.length} records</p>
             </div>
             <div style={{ position:"relative" }}>
-              <span style={{ position:"absolute", left:12, top:"50%", transform:"translateY(-50%)", fontSize:13, color:"var(--text-3)", pointerEvents:"none" }}>🔍</span>
+
               <input placeholder="Search employees..." value={search} onChange={e=>setSearch(e.target.value)} style={{ paddingLeft:34, width:220, background:"var(--bg-3)" }} />
             </div>
             {isAdmin && (
@@ -534,7 +538,7 @@ function Dashboard({ username, onLogout, showToast }) {
             </div>
           ) : filtered.length===0 ? (
             <div style={{ padding:"60px 0", textAlign:"center" }}>
-              <div style={{ fontSize:40, marginBottom:12 }}>🔍</div>
+
               <p style={{ color:"var(--text-2)", fontSize:15, marginBottom:4 }}>{search?"No matching employees":"No employees yet"}</p>
               <p style={{ color:"var(--text-3)", fontSize:13 }}>{search?"Try a different search term":"Click 'Add Employee' to get started"}</p>
             </div>
@@ -565,7 +569,7 @@ function Dashboard({ username, onLogout, showToast }) {
                         </td>
                         <td style={{ padding:"14px 16px", color:"var(--text-2)", fontSize:13 }}>{emp.email}</td>
                         <td style={{ padding:"14px 16px" }}>
-                          <span className="tag" style={{ background:`${dept.color}15`, color:dept.color, border:`1px solid ${dept.color}25` }}>{dept.icon} {emp.department}</span>
+                          <span className="tag" style={{ background:`${dept.color}15`, color:dept.color, border:`1px solid ${dept.color}25` }}>{emp.department}</span>
                         </td>
                         <td style={{ padding:"14px 16px", color:"var(--text-3)", fontSize:12, fontFamily:"var(--font-mono)" }}>{emp.dateOfJoining}</td>
                         <td style={{ padding:"14px 16px" }}>
@@ -577,13 +581,19 @@ function Dashboard({ username, onLogout, showToast }) {
                         <td style={{ padding:"14px 16px" }}>
                           {isAdmin && (
                             <div style={{ display:"flex", gap:6 }}>
-                              {[{icon:"✏️",title:"Edit",action:()=>setModal(emp),hover:"var(--accent-dim)"},
-                                {icon:"🗑️",title:"Delete",action:()=>setDeleteTarget(emp),hover:"var(--red-dim)"}
-                              ].map(({icon,title,action,hover})=>(
-                                <button key={title} onClick={action} title={title} style={{ background:"none", border:"1px solid var(--border)", borderRadius:"var(--radius-sm)", padding:"5px 8px", fontSize:14, transition:"all 0.15s" }}
-                                  onMouseEnter={e=>{e.currentTarget.style.background=hover;e.currentTarget.style.borderColor="var(--border-hover)";}}
-                                  onMouseLeave={e=>{e.currentTarget.style.background="none";e.currentTarget.style.borderColor="var(--border)";}}
-                                >{icon}</button>
+                              {[
+                                {label:"Edit",   action:()=>setModal(emp),        bg:"var(--accent-dim)", color:"var(--accent)", hoverBg:"rgba(37,99,235,0.15)"},
+                                {label:"Delete", action:()=>setDeleteTarget(emp), bg:"var(--red-dim)",    color:"var(--red)",    hoverBg:"rgba(220,38,38,0.15)"},
+                              ].map(({label,action,bg,color,hoverBg})=>(
+                                <button key={label} onClick={action} style={{
+                                  background:bg, color:color,
+                                  border:"none", borderRadius:"var(--radius-sm)",
+                                  padding:"5px 12px", fontSize:12, fontWeight:500,
+                                  cursor:"pointer", transition:"background 0.15s",
+                                }}
+                                  onMouseEnter={e=>e.currentTarget.style.background=hoverBg}
+                                  onMouseLeave={e=>e.currentTarget.style.background=bg}
+                                >{label}</button>
                               ))}
                             </div>
                           )}
